@@ -11,7 +11,7 @@ MainPanel::MainPanel(MercuryCapsule* vessel)
 	pBackground->SetTextureCoord(_R(0, 572, 2048, 2048));
 	SetBackgroundMesh(pBackground);
 
-	SetScrollFlags(PANEL_ATTACH_BOTTOM | PANEL_MOVEOUT_BOTTOM);
+	SetScrollFlags(PANEL_MOVEOUT_BOTTOM | PANEL_MOVEOUT_TOP | PANEL_ATTACH_BOTTOM | PANEL_ATTACH_TOP);
 
 	test = new TestElement();
 	AddPanelElement(test);

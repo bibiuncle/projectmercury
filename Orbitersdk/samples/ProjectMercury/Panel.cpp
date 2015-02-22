@@ -38,6 +38,11 @@ void Panel::LoadPanel(PANELHANDLE hPanel, DWORD viewW, DWORD viewH)
 
 	// Register the panel.
 	pVessel->SetPanelBackground(hPanel, surf, pTextures.size(), hMesh, (DWORD)pMeshBackground->GetWidth(), (DWORD)pMeshBackground->GetHeight(), 0, scrollFlags);
+
+	// Set panel scale
+	double defscale = (double)viewW / pMeshBackground->GetWidth();
+	double extscale = max(defscale, 1.0);
+	pVessel->SetPanelScaling(hPanel, defscale, extscale);
 	
 	// Register the panel areas.
 	int id = 0;
