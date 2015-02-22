@@ -23,25 +23,70 @@ Panel::~Panel()
 
 void Panel::LoadPanel(PANELHANDLE hPanel, DWORD viewW, DWORD viewH)
 {
+	// Create the mesh.
 	if (!hMesh)
 	{
 		CreateMesh();
 	}
 
-	for (PanelElement* elem : pPanelElements)
-	{
-		elem->Reset();
-	}
-
+	// Create a temporary SURFHANDLE array.
 	SURFHANDLE* surf = new SURFHANDLE[pTextures.size()];
 	for (unsigned int i = 0; i < pTextures.size(); i++)
 	{
 		surf[i] = pTextures[i]->GetSurfhandle();
 	}
 
+	// Register the panel.
 	pVessel->SetPanelBackground(hPanel, surf, pTextures.size(), hMesh, (DWORD)pMeshBackground->GetWidth(), (DWORD)pMeshBackground->GetHeight(), 0, scrollFlags);
+	
+	// Register the panel areas.
+	int id = 0;
+	for (PanelElement* elem : pPanelElements)
+	{
+		for (SPanelArea area : elem->GetPanelAreas())
+		{
+			pVessel->RegisterPanelArea(hPanel, id, area.pos, area.drawEvent, area.mouseEvent, NULL, elem);
+			id++;
+		}
+
+		elem->Reset();
+	}
 
 	delete[] surf;
+}
+
+bool Panel::MouseEvent(int id, int event, int mx, int my, void* context)
+{
+	bool result = false;
+
+	if (context != NULL)
+	{
+		PanelElement* elem = (PanelElement*)context;
+		auto it = std::find(pPanelElements.begin(), pPanelElements.end(), elem);
+		if (it != pPanelElements.end())
+		{
+			result = elem->ProcessMouse(event, mx, my);
+		}
+	}
+
+	return result;
+}
+
+bool Panel::RedrawEvent(int id, int event, SURFHANDLE surf, void* context)
+{
+	bool result = false;
+
+	if (context != NULL)
+	{
+		PanelElement* elem = (PanelElement*)context;
+		auto it = std::find(pPanelElements.begin(), pPanelElements.end(), elem);
+		if (it != pPanelElements.end())
+		{
+			result = elem->Redraw(surf);
+		}
+	}
+
+	return result;
 }
 
 void Panel::SetBackgroundMesh(PanelMesh* mesh)

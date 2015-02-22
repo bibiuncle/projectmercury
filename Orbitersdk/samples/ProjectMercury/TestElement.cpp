@@ -12,6 +12,7 @@ TestElement::TestElement()
 TestElement::~TestElement()
 {
 	delete pMesh;
+	delete pMesh2;
 }
 
 void TestElement::Reset()
@@ -20,8 +21,18 @@ void TestElement::Reset()
 	pMesh2->SetTextureCoord(_R(200, 200, 250, 250));
 }
 
+bool TestElement::ProcessMouse(int event, int mx, int my)
+{
+	pMesh2->SetTextureCoord(_R(100, 100, 300, 300));
+	return true;
+}
+
 std::vector<PanelMesh*> TestElement::GetPanelMesh()
 {
 	return { pMesh, pMesh2 };
-	//return{ pMesh2 };
+}
+
+std::vector<SPanelArea> TestElement::GetPanelAreas()
+{
+	return{ { _R(0, 0, 100, 100), PANEL_REDRAW_USER, PANEL_MOUSE_DOWN } };
 }

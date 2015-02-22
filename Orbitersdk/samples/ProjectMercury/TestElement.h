@@ -12,9 +12,10 @@ public:
 
 	virtual void Reset();
 	//virtual bool Redraw(SURFHANDLE surf);
-	//virtual bool ProcessMouse(int event, int mx, int my);
+	virtual bool ProcessMouse(int event, int mx, int my);
 
 	virtual std::vector<PanelMesh*> GetPanelMesh();
+	virtual std::vector<SPanelArea> GetPanelAreas();
 
 private:
 	PanelMesh* pMesh;

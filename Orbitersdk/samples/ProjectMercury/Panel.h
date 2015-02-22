@@ -16,6 +16,8 @@ public:
 	virtual ~Panel();
 
 	virtual void LoadPanel(PANELHANDLE hPanel, DWORD viewW, DWORD viewH);
+	virtual bool MouseEvent(int id, int event, int mx, int my, void* context);
+	virtual bool RedrawEvent(int id, int event, SURFHANDLE surf, void* context);
 
 protected:
 	void SetBackgroundMesh(PanelMesh* mesh);

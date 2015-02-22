@@ -30,3 +30,8 @@ std::vector<PanelMesh*> PanelElement::GetPanelMesh()
 {
 	return {};
 }
+
+std::vector<SPanelArea> PanelElement::GetPanelAreas()
+{
+	return {};
+}

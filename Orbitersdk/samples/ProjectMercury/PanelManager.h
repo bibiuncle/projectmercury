@@ -1,5 +1,6 @@
 #pragma once
 
+class Panel;
 class MainPanel;
 
 #include "Orbitersdk.h"
@@ -16,5 +17,6 @@ public:
 	bool PanelRedrawEvent(int id, int event, SURFHANDLE surf, void* context);
 
 private:
+	Panel* pCurrentPanel;
 	MainPanel* pMainPanel;
 };

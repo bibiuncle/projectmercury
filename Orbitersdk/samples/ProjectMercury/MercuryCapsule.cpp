@@ -16,3 +16,13 @@ bool MercuryCapsule::clbkLoadPanel2D(int id, PANELHANDLE hPanel, DWORD viewW, DW
 {
 	return pPanelManager->LoadPanel2D(id, hPanel, viewW, viewH);
 }
+
+bool MercuryCapsule::clbkPanelMouseEvent(int  id, int  event, int  mx, int  my, void *  context)
+{
+	return pPanelManager->PanelMouseEvent(id, event, mx, my, context);
+}
+
+bool MercuryCapsule::clbkPanelRedrawEvent(int  id, int  event, SURFHANDLE  surf, void *  context)
+{
+	return pPanelManager->PanelRedrawEvent(id, event, surf, context);
+}
