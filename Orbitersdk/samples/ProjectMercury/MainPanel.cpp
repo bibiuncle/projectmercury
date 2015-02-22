@@ -7,8 +7,8 @@
 MainPanel::MainPanel(MercuryCapsule* vessel)
 :Panel(vessel)
 {
-	pBackground = new PanelMesh(PanelTextureManager::GetTexture("DG/dg_panel.dds"));
-	pBackground->SetTextureCoord(_R(0, 452, 1280, 1024));
+	pBackground = new PanelMesh(PanelTextureManager::GetTexture("Panel1.dds"));
+	pBackground->SetTextureCoord(_R(0, 572, 2048, 2048));
 	SetBackgroundMesh(pBackground);
 
 	SetScrollFlags(PANEL_ATTACH_BOTTOM | PANEL_MOVEOUT_BOTTOM);

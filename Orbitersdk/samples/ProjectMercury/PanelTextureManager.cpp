@@ -5,6 +5,8 @@ std::list<PanelTexture*> PanelTextureManager::textures;
 
 PanelTexture* PanelTextureManager::GetTexture(std::string fname)
 {
+	fname = "ProjectMercury/" + fname;
+
 	for (PanelTexture* tex : textures)
 	{
 		if (tex->GetFilename() == fname)
@@ -19,7 +21,7 @@ PanelTexture* PanelTextureManager::GetTexture(std::string fname)
 
 void PanelTextureManager::LoadTextures()
 {
-	textures.push_back(new PanelTexture("DG/dg_panel.dds", 2048, 1024));
+	textures.push_back(new PanelTexture("ProjectMercury/Panel1.dds", 2048, 2048));
 }
 
 void PanelTextureManager::FreeTextures()
