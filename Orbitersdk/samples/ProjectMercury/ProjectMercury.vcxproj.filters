@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Panel">
+      <UniqueIdentifier>{96393d69-0520-4596-8248-0e8d914201a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Panel\Common">
+      <UniqueIdentifier>{d9e73365-f192-4938-a33c-ce1ba7cfd5c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Module.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="MercuryCapsule.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Panel.cpp">
+      <Filter>Panel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelElement.cpp">
+      <Filter>Panel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelMesh.cpp">
+      <Filter>Panel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelTexture.cpp">
+      <Filter>Panel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelManager.cpp">
+      <Filter>Panel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="TestElement.cpp">
+      <Filter>Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="MainPanel.cpp">
+      <Filter>Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="VesselComponent.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelTextureManager.cpp">
+      <Filter>Panel\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MercuryCapsule.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>Panel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelElement.h">
+      <Filter>Panel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelManager.h">
+      <Filter>Panel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelMesh.h">
+      <Filter>Panel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelTexture.h">
+      <Filter>Panel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MainPanel.h">
+      <Filter>Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="TestElement.h">
+      <Filter>Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="VesselComponent.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelTextureManager.h">
+      <Filter>Panel\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,48 @@
+BEGIN_DESC
+OLVE_DEBUG
+END_DESC
+
+BEGIN_ENVIRONMENT
+  System Sol
+  Date MJD 57504.39792
+END_ENVIRONMENT
+
+BEGIN_FOCUS
+  Ship ProjectMercury
+END_FOCUS
+
+BEGIN_CAMERA
+  TARGET OLVE_DEBUG
+  MODE Extern
+  POS 6.29 135.29 -28.79
+  TRACKMODE TargetRelative
+  FOV 50.00
+END_CAMERA
+
+BEGIN_HUD
+  TYPE Surface
+END_HUD
+
+BEGIN_MFD Left
+  TYPE Surface
+END_MFD
+
+BEGIN_MFD Right
+  TYPE Map
+  REF Moon 
+  BTARGET Brighton Beach
+END_MFD
+
+BEGIN_PANEL
+END_PANEL
+
+
+BEGIN_SHIPS
+ProjectMercury:ProjectMercury/MercuryCapsule
+  STATUS Landed Moon
+  BASE Brighton Beach:2
+  HEADING 70.00
+  PRPLEVEL 0:1.000
+  NAVFREQ 0 0
+  XPDR 0
+END_SHIPS
