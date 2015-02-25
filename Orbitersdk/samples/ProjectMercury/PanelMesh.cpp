@@ -13,7 +13,15 @@ PanelMesh::~PanelMesh()
 
 void PanelMesh::Translate(int x, int y)
 {
-	
+	pVtx.x(0, pVtx.x(0) + x);
+	pVtx.x(1, pVtx.x(1) + x);
+	pVtx.x(2, pVtx.x(2) + x);
+	pVtx.x(3, pVtx.x(3) + x);
+
+	pVtx.y(0, pVtx.y(0) + y);
+	pVtx.y(1, pVtx.y(1) + y);
+	pVtx.y(2, pVtx.y(2) + y);
+	pVtx.y(3, pVtx.y(3) + y);
 }
 
 void PanelMesh::Rotate(int x, int y, double deg)
@@ -47,12 +55,14 @@ void PanelMesh::SetTextureCoord(RECT coord, bool resize)
 
 void PanelMesh::SetWidth(int w)
 {
-
+	pVtx.x(1, pVtx.x(0) + w);
+	pVtx.x(2, pVtx.x(0) + w);
 }
 
 void PanelMesh::SetHeight(int h)
 {
-
+	pVtx.y(2, pVtx.y(0) + h);
+	pVtx.y(3, pVtx.y(0) + h);
 }
 
 float PanelMesh::GetWidth()

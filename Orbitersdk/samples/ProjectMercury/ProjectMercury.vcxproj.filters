@@ -34,9 +34,6 @@
     <ClCompile Include="PanelManager.cpp">
       <Filter>Panel\Common</Filter>
     </ClCompile>
-    <ClCompile Include="TestElement.cpp">
-      <Filter>Panel</Filter>
-    </ClCompile>
     <ClCompile Include="MainPanel.cpp">
       <Filter>Panel</Filter>
     </ClCompile>
@@ -45,6 +42,9 @@
     </ClCompile>
     <ClCompile Include="PanelTextureManager.cpp">
       <Filter>Panel\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelSwitch3Way.cpp">
+      <Filter>Panel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,14 +69,14 @@
     <ClInclude Include="MainPanel.h">
       <Filter>Panel</Filter>
     </ClInclude>
-    <ClInclude Include="TestElement.h">
-      <Filter>Panel</Filter>
-    </ClInclude>
     <ClInclude Include="VesselComponent.h">
       <Filter>Main</Filter>
     </ClInclude>
     <ClInclude Include="PanelTextureManager.h">
       <Filter>Panel\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelSwitch3Way.h">
+      <Filter>Panel</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

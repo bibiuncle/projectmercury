@@ -41,7 +41,7 @@ public:
 
 	void Translate(int x, int y);
 	void Rotate(int x, int y, double deg);
-	void SetTextureCoord(RECT coord, bool resize = true);
+	void SetTextureCoord(RECT coord, bool resize = false);
 	void SetWidth(int w);
 	void SetHeight(int h);
 	float GetWidth();

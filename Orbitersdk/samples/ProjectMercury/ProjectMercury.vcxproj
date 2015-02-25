@@ -75,9 +75,9 @@
     <ClCompile Include="PanelElement.cpp" />
     <ClCompile Include="PanelManager.cpp" />
     <ClCompile Include="PanelMesh.cpp" />
+    <ClCompile Include="PanelSwitch3Way.cpp" />
     <ClCompile Include="PanelTexture.cpp" />
     <ClCompile Include="PanelTextureManager.cpp" />
-    <ClCompile Include="TestElement.cpp" />
     <ClCompile Include="VesselComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +87,9 @@
     <ClInclude Include="PanelElement.h" />
     <ClInclude Include="PanelManager.h" />
     <ClInclude Include="PanelMesh.h" />
+    <ClInclude Include="PanelSwitch3Way.h" />
     <ClInclude Include="PanelTexture.h" />
     <ClInclude Include="PanelTextureManager.h" />
-    <ClInclude Include="TestElement.h" />
     <ClInclude Include="VesselComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

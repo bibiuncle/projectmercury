@@ -1,6 +1,6 @@
 #pragma once
 
-class TestElement;
+class PanelSwitch3Way;
 
 #include "Panel.h"
 
@@ -12,5 +12,5 @@ public:
 
 private:
 	PanelMesh* pBackground;
-	TestElement* test;
+	PanelSwitch3Way* pSwitchASCSMode;
 };
