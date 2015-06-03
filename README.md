@@ -3,7 +3,9 @@
 This project is open to everybody. I am not really working on it right now.
 
 Original website : http://www.ibiblio.org/mscorbit/
+
 Original code : http://sourceforge.net/projects/mscorbaddon/
+
 Forum : http://www.ibiblio.org/mscorbit/mscforum/
 
 ## License
